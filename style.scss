@@ -18,16 +18,21 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 1024px;
   padding: 0 10px;
   width: 100%;
+}
+
+table.image caption {
+  color: $darkGray;
+  font: 16px/1.4 $helvetica;
 }
 
 h1, h2, h3, h4, h5, h6 {
