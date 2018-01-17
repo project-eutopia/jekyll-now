@@ -161,4 +161,27 @@ Notice how the green linearly fit function tends to pass through the center of t
   <caption align="bottom">Piecewise linearly interpolated function for $\sin(2x)$ between 0 and 1 with $N = 4$.</caption>
 </table>
 
-An example implementation of this algorithm in C++ [can be found here](https://github.com/project-eutopia/roulette/blob/d4f4ab4b184d985d6a34bb2fcb716f3189721a2c/include/roulette/super_linear_interpolation_impl.h).
+## Benchmark
+
+To demonstrate the effectiveness of this algorithm in speeding up calculation of transcendental functions, I wrote a simple bit of benchmark code that can be [found here](https://onlinegdb.com/rkzM1BpVz).
+It compares calling `std::sin` to my custom defined `fast_sin` method defined using the above algorithm for 90 points between 0 and $2\pi$.
+The benchmark runs for 10,000,000 values between $-\pi$ and $3\pi$, and also computes the maximum absolute error between the two functions.
+The results I get from that online code sample is
+
+```
+std::sin, sum 9.7525e-05, time per call (ns): 59.9636
+fast_sin, sum 9.74093e-05, time per call (ns): 19.9605
+max absolute error: 0.000386341
+```
+
+Here the `fast_sin` method is 3 times faster.
+Also, the largest absolute error is 0.00038, and considering that the range of sin is from -1 to 1, this is fairly small.
+I am not sure what compile flags that site uses, so I also tested locally and found the same 3 times speed up:
+
+```
+➜  cpp clang++ -std=c++11 -Ofast -O3 super_linear.cpp -o super_linear
+➜  cpp ./super_linear
+std::sin, sum 9.7525e-05, time per call (ns): 27.1848
+fast_sin, sum 9.74093e-05, time per call (ns): 9.48272
+max absolute error: 0.000386341
+```
