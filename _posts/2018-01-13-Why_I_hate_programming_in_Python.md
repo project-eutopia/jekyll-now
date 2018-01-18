@@ -11,11 +11,13 @@ Here are some parts of Python I particularly like.
 - It is an interpreted language and interactive Python (e.g. `ipython`, or interactive debugging with `IPython.embed()` or `code.interact(local=locals())`) allows for powerful problem solving and debugging to be done.
 - There are a great many fully featured and well supported libraries out there ([`numpy`](https://www.numpy.org), [`scipy`](https://www.scipy.org/), [`matplotlib`](https://matplotlib.org/)).
 
-I use Python quite a lot for my own research.  However I also do lots of programming in Ruby, and I feel that this has spoiled myself.
-I cannot look at Python as anything other than an old, out-dated language when working in it.
-This post is meant to enumerate my criticisms toward Python that I have been accumulating over the years.
-I don't expect anything to be done about these criticisms, as changing most of them would require non-backwards compatible changes that I am sure the community would not be in favor of.
-Furthermore, if you can live with these idiosyncrasies then Python can be a very powerful tool to do a great many things, whether it is building a website, analyzing complex data sets, or writing a program to automate your smart devices.
+I actually use Python quite a lot for my own research.
+However I also do lots of programming in Ruby, and I feel that this has spoiled myself.
+At this point I can only see Python as an old, out-dated language when working on it.
+In this post I try to enumerate some of my criticisms toward Python that have accumulated.
+I don't expect anything to be done about these criticisms, as changing most of them would require non-backwards compatible changes that I am sure the Python community would not be in favor of.
+Furthermore, I am not trying to advocated against people using Python, because if you can live with these idiosyncrasies then Python can be a very powerful tool to do a great many things, whether it is building a website, analyzing complex data sets, or writing a program to automate your smart devices.
+That said, for those starting out on a potentially large project, I think that Python is only an appropriate tool to use in the initial prototyping stages.
 
 
 ## 1 -- Does not feel object-oriented
@@ -165,6 +167,7 @@ In programming languages, appending `_` or `__` to the front of some name tradit
 - Iterators:  `__iter__`
 - Calling like a function:  `__call__`
 - Context managing:  `__enter__` and `__exit__`
+- Main method through the idiom `if __name__ == "__main__":`, which is just plain verbose
 
 Don't you all get tired typing all these underscores?  I sure do!  The reason for these long and awkward names is that it avoids name conflicts.  However there are other approaches that do not make so many underscores necessary.  For example, a language like C++ and C# uses the keyword `operator` to avoid conflicts when writing operator methods.  Ruby uses the `initialize` keyword for the constructor, the appropriate symbols for comparisons and arithmetic operators (`<`, `==`, `+`, etc), `coerce` to avoid a need for reverse operators like `__radd__`, `to_s` and `inspect` convention method names for string representation methods, allows you to define assignment operators like `name=` for attribute assignment which alleviates the need for the `__setattr__` like methods, container like behavior is superceded by strong support for iterators through blocks and allowing definitions of `[]` and `[]=` methods, the `Proc#call` method for function-like calling, and there is no need for context management due to blocks (e.g. `File.open("README.md", "r") {|f| puts f.read}`).
 
@@ -244,13 +247,3 @@ end
 ```
 
 Multiline blocks also come in handy when doing functional programming (`map`, `filter`, `reduce`).
-
-## 7 -- Poor package management
-
-Python has a couple common package manager choices: `pip` and `conda`.  More modern programming languages tend to have a central package manager that the entire community uses (`npm` for NodeJS, `bundler` for Ruby, `cargo` for Rust).  These package managers also come with the ability to specify dependencies for your projects, with intelligent resolution of dependencies and management of specific version numbers handled for you.  Python has `virtualenv`, but I have avoided using this myself due to the complicated
-TODO
-
-## 8 -- Testing not a first-rate
-
-TODO
-Compare Python tests vs `rspec` and `cargo test`.
