@@ -13,7 +13,9 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
-  {% include disqus.html %}
+  {% if page.draft == false %}
+    {% include disqus.html %}
+  {% endif %}
 </article>
 
 {% include mathjax.html %}
