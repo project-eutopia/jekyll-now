@@ -7,6 +7,10 @@
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
   background-color: #f0f0f0;
+
+  pre.lineno {
+    margin-right: 15px;
+  }
 }
 
 .highlight .c { color: #586E75 } /* Comment */
