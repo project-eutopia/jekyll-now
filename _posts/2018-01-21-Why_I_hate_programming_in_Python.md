@@ -15,8 +15,7 @@ I use Python myself quite a lot for my own research work primarily because of th
 I have been very productive using the language and I think it has deserved the success it has experienced.
 However the more I use Python, the more I have come to notice some short-comings of it, and have come to see it as an old, out-dated language.
 This post is meant to describe weaknesses that I feel are intrinsic to the language itself.
-(in other words, pure Python with only the built-in libraries).
-This means that I will not be talking about the libraries that exist in the language, nor will I be complaining about the package management system of testing libraries.
+This means that I will not be talking about the libraries that exist in the language, nor will I be complaining about things like the package management system or unit testing libraries.
 I am not trying to advocated against people using Python, because if you can live with its idiosyncrasies then Python can be a very powerful tool to do a great many things, whether it is building a website, analyzing complex data sets, or writing a program to automate your smart devices.
 
 ---
