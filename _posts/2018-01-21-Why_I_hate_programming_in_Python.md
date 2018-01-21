@@ -12,7 +12,7 @@ It has many strengths that have contributed to its success as a programming lang
 - It has a large body of freely available libraries that enable programmers to do many things with relative ease.  For example whether it is web development with the [Django](https://www.djangoproject.com/) framework, working with numerical data with [`numpy`](https://www.numpy.org) and [`scipy`](https://www.scipy.org/), using [`matplotlib`](https://matplotlib.org/) for data visualization, or doing machine learning with Python API like that provided by [`keras`](https://keras.io/).
 
 I use Python myself quite a lot for my own research work primarily because of the useful libraries that exist.
-I have been very productive using the language think it has deserved the success it has experienced.
+I have been very productive using the language and I think it has deserved the success it has experienced.
 However the more I use Python, the more I have come to notice some short-comings of it, and have come to see it as an old, out-dated language.
 This post is meant to describe weaknesses that I feel are intrinsic to the language itself.
 (in other words, pure Python with only the built-in libraries).
