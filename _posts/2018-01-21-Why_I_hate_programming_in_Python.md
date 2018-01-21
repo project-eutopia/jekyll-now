@@ -1,6 +1,6 @@
 ---
 layout: post
-draft: true
+draft: false
 title: Why I hate programming in Python
 ---
 
