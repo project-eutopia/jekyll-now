@@ -195,7 +195,7 @@ Don't you all get tired typing all these underscores?  I sure do!  The reason fo
 
 ## 3 -- Global methods
 
-Python has some global methods that are commonly used.  These are given the nice name "[built-in functions](https://docs.python.org/2/library/functions.html)".  However, since Python is an object-oriented language, I feel it makes more sense for many of these to be instance methods, or methods associated with a specific module.  Furthermore, by being global methods these are essentially keywords which further restricts the names available for use (e.g. defining a `len` variable automatically makes the `len` method fail to work where the variable is in scope).  Shown here are some global method calls in Python, and better hypothetical ways to doing the same thing using instance methods or module methods. 
+Python has some global methods that are commonly used.  These are given the nice name "[built-in functions](https://docs.python.org/2/library/functions.html)".  However, since Python is an object-oriented language, I feel it makes more sense for many of these to be instance methods, or methods associated with a specific module.  Furthermore, by being global methods these are essentially keywords which further restricts the names available for use (e.g. defining a `len` variable automatically makes the `len` method fail to work where the variable is in scope).  Shown here are some global method calls in Python, and better hypothetical ways to doing the same thing using instance methods or module methods.
 
 ```python
 abs(-2)
